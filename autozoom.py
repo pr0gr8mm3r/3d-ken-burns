@@ -67,8 +67,8 @@ if __name__ == '__main__':
 
 	dblRatio = float(intWidth) / float(intHeight)
 
-	intWidth = min(int(1024 * dblRatio), 1024)
-	intHeight = min(int(1024 / dblRatio), 1024)
+	intWidth = min(int(1920 * dblRatio), 1920)
+	intHeight = min(int(1080 / dblRatio), 1080)
 
 	numpyImage = cv2.resize(src=numpyImage, dsize=(intWidth, intHeight), fx=0.0, fy=0.0, interpolation=cv2.INTER_AREA)
 
@@ -83,7 +83,7 @@ if __name__ == '__main__':
 
 	objectTo = process_autozoom({
 		'dblShift': 100.0,
-		'dblZoom': 1.25,
+		'dblZoom': 1.15,
 		'objectFrom': objectFrom
 	})
 
